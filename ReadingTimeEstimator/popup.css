@@ -1,0 +1,95 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F0F0F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures the body takes up the full viewport height */
+}
+
+.popup-container {
+    width: 300px; /* Defines a fixed width */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: #FFFFFF;
+    overflow: hidden; /* Ensures nothing spills outside the border-radius */
+}
+
+.header {
+    background-color: #6200EE;
+    color: #FFFFFF;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.content {
+    padding: 20px;
+    text-align: center; /* Centers the text */
+}
+
+.theme-toggle {
+    margin-top: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center; /* Center the toggle button horizontally */
+}
+
+/* Add styles for your SVG icons here. Ensure they are visible against the header's background and content area. */
+
+@media (max-width: 360px) {
+    .popup-container {
+        width: calc(100% - 20px); /* Adjusts width on very small screens */
+        margin: 10px; /* Adds a little margin */
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333;
+}
+
+.dark-mode .popup-container {
+    background: #444;
+    box-shadow: 
+        5px 5px 10px #2c2c2c,
+        -5px -5px 10px #5c5c5c;
+    color: #fff;
+}
+
+.dark-mode h1, .dark-mode p {
+    color: #ddd;
+}
+
+.button {
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.theme-toggle {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.icon {
+    transition: transform 0.3s ease;
+    height: 24px;
+    width: 24px;
+}
+
+.moon-icon {
+    transform: scale(0);
+}
+
+.dark-mode .sun-icon {
+    transform: scale(0);
+}
+
+.dark-mode .moon-icon {
+    transform: scale(1);
+}
